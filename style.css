@@ -3,7 +3,8 @@
 body {
     font-family: 'Open Sans', sans-serif;
     font-weight: lighter;
-    background: white;
+    background: #050d1a;
+    color: #7ecfdf;
     overflow: hidden;
 }
 
@@ -24,6 +25,8 @@ h2 {
 h1 {
     font-size: 30pt;
     margin-bottom: 10px;
+    color: #00ffe7;
+    text-shadow: 0 0 12px #00ffe7, 0 0 30px #00ffe790;
 }
 
 h2 {
@@ -31,7 +34,7 @@ h2 {
     font-style: italic;
     font-family: sans-serif;
     font-weight: lighter;
-    color: #BBB;
+    color: #1a6a80;
 }
 
 .header {
@@ -39,10 +42,6 @@ h2 {
     padding-bottom: 3em;
 }
 
-/*
-  Built-in class:
-    # author: Name
-*/
 .byline {
     font-style: italic;
 }
@@ -56,7 +55,9 @@ h2 {
     position: fixed;
     display: block;
     width: 100%;
-    background: white;
+    background: #050d1a;
+    color: #00ffe7;
+    border-bottom: 1px solid #00ffe730;
     margin: 0;
     padding-top: 6px;
     padding-bottom: 6px;
@@ -70,9 +71,6 @@ h2 {
     }
 }
 
-/* 
-  Enables <iframe> support work on itch.io when using mobile iOS
-*/
 .outerContainer {
     position: absolute;
     display: block;
@@ -86,6 +84,7 @@ h2 {
     top: 0;
     left: 0;
     margin-top: 24px;
+    background: #050d1a;
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -100,11 +99,11 @@ h2 {
 
 .container {
     display: block;
-    max-width: 600px;
+    max-width: 100%;
     margin: 0 auto;
-    padding: 20px;
+    padding: 20px 60px;
     padding-top: 4em;
-    background: white;
+    background: #050d1a;
 }
 
 @media screen and (prefers-reduced-motion: no-preference) {
@@ -115,42 +114,43 @@ h2 {
 
 p {
     font-size: 13pt;
-    color: #888;
+    color: #7ecfdf;
     line-height: 1.7em;
     font-weight: lighter;
 }
 
 a {
     font-weight: 700;
-    color: #b97c2c;
+    color: #00ffe7;
     font-family: sans-serif;
     text-decoration: none;
+    text-shadow: 0 0 6px #00ffe760;
 }
 
 .unclickable {
     font-weight: 700;
-    color: #4f3411;
+    color: #1a6a80;
     font-family: sans-serif;
     text-decoration: none;
     cursor: not-allowed;
 }
 
 a:hover {
-    color: black;
+    color: #ffffff;
+    text-shadow: 0 0 10px #00ffe7, 0 0 20px #00ffe7;
 }
 
 @media screen and (prefers-reduced-motion: no-preference) {
     a {
-        transition: color 0.6s;
+        transition: color 0.3s, text-shadow 0.3s;
     }
-
     a:hover {
-        transition: color 0.1s;
+        transition: color 0.1s, text-shadow 0.1s;
     }
 }
 
 strong {
-    color: black;
+    color: #00ffe7;
     font-weight: bold;
 }
 
@@ -178,37 +178,24 @@ img {
     }
 }
 
-/*
-  Class applied to all choices
-  (Will always appear inside <p> element by default.)
-*/
 .choice {
     text-align: center;
     line-height: 1.7em;
 }
 
-/* 
-  Class applied to first choice
-*/
 :not(.choice)+.choice {
     padding-top: 1em;
 }
 
-/*
-  Class applied to choice links
-*/
 .choice a, .choice span {
     font-size: 15pt;
 }
 
-/* 
-  Built-in class:
-    The End # CLASS: end
-*/
 .end {
     text-align: center;
     font-weight: bold;
-    color: black;
+    color: #00ffe7;
+    text-shadow: 0 0 10px #00ffe7;
     padding-top: 20px;
     padding-bottom: 20px;
 }
@@ -222,7 +209,8 @@ img {
     right: 14px;
     top: 4px;
     user-select: none;
-    background: white;
+    background: #050d1a;
+    color: #00ffe7;
 }
 
 @media screen and (prefers-reduced-motion: no-preference) {
@@ -232,7 +220,7 @@ img {
 }
 
 #controls [disabled] {
-    color: #ccc;
+    color: #1a3a5c;
 }
 
 #controls>*:not(:last-child):after {
@@ -249,58 +237,51 @@ img {
     }
 }
 
-/* 
-  Dark Theme (Added in Inky 0.10.0)
-    # theme: dark
-*/
-
 body.dark {
-    background: black;
-    color: white;
+    background: #050d1a;
+    color: #7ecfdf;
 }
 
 .dark h2 {
-    color: #666;
+    color: #1a6a80;
 }
 
 .dark .container {
-    background: black;
+    background: #050d1a;
 }
 
 .dark .written-in-ink {
-    background: black;
+    background: #050d1a;
 }
 
 .dark a {
-    color: #cc8f1a;
+    color: #00ffe7;
+    text-shadow: 0 0 6px #00ffe760;
 }
-.dark .unclickable{
-    color: #c4af87;
-    cursor:not-allowed;
+
+.dark .unclickable {
+    color: #1a6a80;
+    cursor: not-allowed;
 }
 
 .dark a:hover {
-    color: white;
-}
-
-@media screen and (prefers-reduced-motion: no-preference) {
-    .dark a {
-        transition: color 0.6s;
-    }
+    color: #ffffff;
+    text-shadow: 0 0 10px #00ffe7, 0 0 20px #00ffe7;
 }
 
 .dark strong {
-    color: white;
+    color: #00ffe7;
 }
 
 .dark #controls [disabled] {
-    color: #444;
+    color: #1a3a5c;
 }
 
 .dark .end {
-    color: white;
+    color: #00ffe7;
+    text-shadow: 0 0 10px #00ffe7;
 }
 
 .dark #controls {
-    background: black;
+    background: #050d1a;
 }
